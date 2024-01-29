@@ -1,22 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import ButtonComponent from "./ButtonComponent";
+import ClassExampleComponent from "./ClassComponentExample";
+import HeaderComponent from "./HeaderComponent";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <HeaderComponent text="Scegli il tuo preferito" />
+        <ClassExampleComponent
+          url="http://placekitten.com/200"
+          description="gattino"
+          borderRadius="circle"
+          display="changeDisplay"
+        />
+        <ClassExampleComponent
+          url="https://placedog.net/300"
+          description="cagnolino"
+          borderRadius="circle"
+          display="changeDisplay"
+        />
+        <ButtonComponent text="Gattino" />
+        <ButtonComponent text="Cagnolino" />
       </header>
     </div>
   );
